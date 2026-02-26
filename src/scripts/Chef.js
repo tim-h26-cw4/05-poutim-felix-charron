@@ -1,7 +1,7 @@
 import Poutine from './Poutine.js';
 export default class Chef {
   constructor(element) {
-    // console.log('Je mange de la poutine');
+    // console.log('# 1 - Je mange de la poutine');
     this.menu = [];
     this.element = element;
     this.container = this.element.querySelector('.chef__order');
