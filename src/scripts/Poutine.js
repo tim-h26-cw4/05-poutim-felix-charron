@@ -13,7 +13,21 @@ export default class Poutine {
     }
   }
 
-  selectType() {
+  selectType(event) {
     console.log('POUTINE MIAM!!!');
+    for (let i = 0; i < this.types.length; i++) {
+      const type = this.types[i];
+      if (type.classList.contains('is-active')) {
+        type.classList.remove('is-active');
+      }
+    }
+    const btnClicked = event.currentTarget;
+    btnClicked.classList.add('is-active');
+
+    this.selectedType = btnClicked.textContent;
+    console.log(this.selectedType);
+    this.updatedPhoto();
   }
+
+  updatedPhoto() {}
 }
