@@ -29,5 +29,10 @@ export default class Poutine {
     this.updatedPhoto();
   }
 
-  updatedPhoto() {}
+  updatedPhoto() {
+    console.log('Cette poutine a lair ordinaire!');
+    const img = this.element.querySelector('.poutine__image');
+    img.classList.add('is-active');
+    img.src = `assets/images/${this.selectedType}.png`;
+  }
 }
