@@ -16,9 +16,16 @@ export default class Chef {
       console.log(this.menu);
     }
 
-    const btnCommande = this.element.querySelector('.button');
+    const btnCommande = this.element.querySelector('.button-secondary');
     btnCommande.addEventListener('click', this.sendOrder.bind(this));
   }
 
-  sendOrder() {}
+  sendOrder() {
+    this.container.innerHTML = '';
+    const poutines = this.element.querySelectorAll('.poutine__image.is-active');
+    console.log(poutines.length);
+    const text = document.createElement('p');
+    text.innerText = `Nombre total de poutine(s) :  ${poutines.length}`;
+    this.container.appendChild(text);
+  }
 }
